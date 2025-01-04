@@ -1,127 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Bug Hunter</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
-      color: #333;
-    }
-    
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    h1 {
-      color: #333;
-      margin-top: 0;
-      text-align: center;
-      background: linear-gradient(to right, #007bff, #00bfff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-weight: bold;
-      font-size: 32px;
-    }
-    
-    h2 {
-      color: #555;
-      margin-top: 20px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-weight: bold;
-      font-size: 24px;
-    }
-    
-    p {
-      margin-bottom: 20px;
-      font-family: 'Arial', sans-serif;
-      font-size: 16px;
-    }
-    
-    .highlight {
-      color: #007bff;
-      font-weight: bold;
-    }
-    
-    ul {
-      padding-left: 20px;
-    }
-    
-    .skill-list li {
-      list-style: none;
-      margin-bottom: 10px;
-    }
-    
-    .contact-list li {
-      list-style: none;
-      display: inline-block;
-      margin-right: 10px;
-    }
-    
-    .contact-list i {
-      margin-right: 5px;
-      color: #555;
-    }
-    
-    .profile-picture {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin: 20px auto;
-      background-color: #007bff;
-      overflow: hidden;
-    }
-    
-    .profile-picture img {
-      width: 100%;
-      height: auto;
-    }
-    .contact-list a {
-      color: #333;
-      margin-top: 0;
-      background: linear-gradient(to right, #007bff, #00bfff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-weight: bold;
-      font-size: 18px;
-         }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Hamed Mohamed - h0x1d</title>
 </head>
 <body>
   <div class="container">
-    <h1>Bug Hunter CV</h1>
-    
-    <div class="profile-picture">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnslu5aHQoTZwH2-N8KEJLxzUus-49tfLu7mt5hGnuW9dWC37-4Dd6c7XATPVegJT9o4o" alt="Profile Picture">
-    </div>
-    
-    <h2>About Me</h2>
-    <p>I am an experienced and dedicated web bug hunter with expertise in identifying and resolving security vulnerabilities. With my knowledge in web application security and penetration testing, I am committed to ensuring the highest level of security for web applications and systems. I stay updated with the latest security trends and techniques to provide effective solutions and mitigate potential risks.</p>
-    
-    <h2>Skills</h2>
-    <ul class="skill-list">
-      <li>Web application security assessment</li>
-      <li>Penetration testing and vulnerability scanning</li>
-      <li>Threat modeling and risk assessment</li>
-      <li>OWASP Top 10 vulnerabilities</li>
-      <li>Security tools (Burp Suite, Nmap, Metasploit ,Etc)</li>
-      <li>Web technologies (HTML, CSS, JavaScript, SQL)</li>
-      <li>Network protocols (TCP/IP, HTTP, SSL/TLS)</li>
-    
-    <h2>Contact</h2>
-    <ul class="contact-list">
-      <li><i class="fab fa-linkedin"></i> <a href="https://twitter.com/h0x1d" target="_blank">Twitter</a></li>
-      <li><i class="fab fa-github"></i> <a href="https://github.com/h0x1d" target="_blank">GitHub</a></li>
+    <header>
+      <div id="container">
+        <div id="playpen"></div>
+        <div id="tabs-example">
+          <ul class="nav clearfix">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+          <div class="content"></div>
+        </div>
+      </div>
+      <h1>h0x1d</h1>
+      <p class="subtitle">Collection of bug bounty write-ups and research</p>
+    </header>
+
+    <h2>Blog Posts:</h2>
+    <ul class="listing">
+      <li>
+        <a href="/posts/Context-Aware-Conent-Discovery-with-Chameleon/">
+          Context-Aware Content Discovery with Chameleon
+        </a>
+        <time datetime="2022-09-10">September 10, 2022</time>
+      </li>
+      <li>
+        <a href="/posts/Cache-Poisoning-at-Scale/">
+          Cache Poisoning at Scale
+        </a>
+        <time datetime="2021-12-23">December 23, 2021</time>
+      </li>
+      <li>
+        <a href="/posts/Bypassing-2FA-Using-OpenID-Misconfiguration/">
+          Bypassing 2FA using OpenID Misconfiguration
+        </a>
+        <time datetime="2021-06-11">June 11, 2021</time>
+      </li>
+      <li>
+        <a href="/posts/Cache-Key-Normalization-Denial-of-Service/">
+          Cache Key Normalization DoS
+        </a>
+        <time datetime="2020-12-19">December 19, 2020</time>
+      </li>
     </ul>
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
-
