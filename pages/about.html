@@ -1,52 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../css/styles.css"><title>h0x1d</title></head><body><div class="container"><header><div id="container"><div id="playpen"></div><div id="tabs-example"><ul class="nav clearfix"><li><a href="/">Home</a></li><li><a href="/about">About</a></li></ul><div class="content"></div></div></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script><h1>h0x1d</h1><p class="subtitle">Bug bounty hunter from Egypt I'll post some of my findings on this blog. If you want to contact me, feel free to do so at any of the below</p><script>// DOM Ready
-	$(function() {
-	
-		var originalBGplaypen = $("#playpen").css("background-color"),
-			x, y, xy, bgWebKit, bgMoz, 
-			lightColor = "rgba(255,255,255,0.75)",
-			gradientSize = 100;
-				
-			// Basic Demo
-			$('#playpen').mousemove(function(e) {
-			
-				x  = 10000//e.pageX - this.offsetLeft;
-				y  = 10000//e.pageY - this.offsetTop;
-				xy = x + " " + y;
-				   
-				bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", " + gradientSize + ", from(" + lightColor + "), to(rgba(0,0,0,0.0))), " + originalBGplaypen;
-				bgMoz    = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBGplaypen + " " + gradientSize + "px)";
-									
-				$(this)
-					.css({ background: bgWebKit })
-					.css({ background: bgMoz });
-				
-			}).mouseleave(function() {			
-				$(this).css({ background: originalBGplaypen });
-			});
-		
-	
-	
-			
-			var originalBG = $(".nav a").css("background-color");
-			
-			$('.nav li:not(".active") a')
-			.mousemove(function(e) {
-			
-				   x  = e.pageX - this.offsetLeft;
-				   y  = e.pageY - this.offsetTop;
-				   xy = x + " " + y;
-				   
-				   bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", 100, from(rgba(19,44,64,0.8)), to(rgba(255,255,255,0.0))), " + originalBG;
-				   bgMoz    = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBG + " " + gradientSize + "px)";
-			
-					$(this)
-						.css({ background: bgWebKit })
-						.css({ background: bgMoz });
-					
-					
-			}).mouseleave(function() {
-				$(this).css({ background: originalBG });
-			});
-			
-	});</script></header><h2>Contact:</h2><p>Twitter: <a href="https://x.com/h0x1d">h0x1d</a></p><p>Hackerone: <a href="https://hackerone.com/h0x1d">h0x1d</a></p><p>Bugcrowd: <a href="https://bugcrowd.com/h0x1d">h0x1d</a></p><p>LinkedIn: <a href="https://www.linkedin.com/in/h0x1d/">h0x1d</a></p><p>Medium: <a href="https://h0x1d.medium.com">h0x1d</a></p></div><script>function btnHandler(e,n){e=document.querySelector(e);e&&e.addEventListener("click",function(e){e.preventDefault(),n()},!1)}btnHandler(".btn-log",function(){console.log("👋 Oh, hello there!")});</script></body></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>About h0x1d</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div id="container">
+        <div id="playpen"></div>
+        <div id="tabs-example">
+			<ul class="nav clearfix">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>			  
+        </div>
+      </div>
+      <h2>About h0x1d</h2>
+      <p class="subtitle">My journey in bug bounty and cybersecurity research</p>
+    </header>
+
+    <main>
+      <section class="about-content">
+        <h3>Who am I?</h3>
+        <p>I'm a passionate bug bounty hunter and cybersecurity researcher, focusing on discovering vulnerabilities, writing detailed reports, and enhancing security in web applications.</p>
+
+        <h3>What I Do</h3>
+        <p>My work mainly involves finding high-impact vulnerabilities like IDOR, privilege escalation, and logic bugs. I enjoy deep diving into complex security issues and sharing my findings with the community.</p>
+
+        <h3>Contact</h3>
+        <p>Follow me on:</p>
+        <ul class="contact-links">
+          <li>Twitter: <a href="https://x.com/h0x1d">h0x1d</a></li>
+          <li>Hackerone: <a href="https://hackerone.com/h0x1d">h0x1d</a></li>
+          <li>Bugcrowd: <a href="https://bugcrowd.com/h0x1d">h0x1d</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/h0x1d/">h0x1d</a></li>
+          <li>Medium: <a href="https://h0x1d.medium.com">h0x1d</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script src="../js/scripts.js"></script>
+</body>
+
+</html>
