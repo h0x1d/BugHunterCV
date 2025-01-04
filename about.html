@@ -1,0 +1,52 @@
+
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/styles.css"><title>Youstin</title></head><body><div class="container"><header><div id="container"><div id="playpen"></div><div id="tabs-example"><ul class="nav clearfix"><li><a href="/">Home</a></li><li><a href="/about">About</a></li></ul><div class="content"></div></div></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script><h1>Youstin</h1><p class="subtitle">Bug bounty hunter from Romania. I'll post some of my findings on this blog. If you want to contact me, feel free to do so at any of the below</p><script>// DOM Ready
+	$(function() {
+	
+		var originalBGplaypen = $("#playpen").css("background-color"),
+			x, y, xy, bgWebKit, bgMoz, 
+			lightColor = "rgba(255,255,255,0.75)",
+			gradientSize = 100;
+				
+			// Basic Demo
+			$('#playpen').mousemove(function(e) {
+			
+				x  = 10000//e.pageX - this.offsetLeft;
+				y  = 10000//e.pageY - this.offsetTop;
+				xy = x + " " + y;
+				   
+				bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", " + gradientSize + ", from(" + lightColor + "), to(rgba(0,0,0,0.0))), " + originalBGplaypen;
+				bgMoz    = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBGplaypen + " " + gradientSize + "px)";
+									
+				$(this)
+					.css({ background: bgWebKit })
+					.css({ background: bgMoz });
+				
+			}).mouseleave(function() {			
+				$(this).css({ background: originalBGplaypen });
+			});
+		
+	
+	
+			
+			var originalBG = $(".nav a").css("background-color");
+			
+			$('.nav li:not(".active") a')
+			.mousemove(function(e) {
+			
+				   x  = e.pageX - this.offsetLeft;
+				   y  = e.pageY - this.offsetTop;
+				   xy = x + " " + y;
+				   
+				   bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", 100, from(rgba(19,44,64,0.8)), to(rgba(255,255,255,0.0))), " + originalBG;
+				   bgMoz    = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBG + " " + gradientSize + "px)";
+			
+					$(this)
+						.css({ background: bgWebKit })
+						.css({ background: bgMoz });
+					
+					
+			}).mouseleave(function() {
+				$(this).css({ background: originalBG });
+			});
+			
+	});</script></header><h2>Contact:</h2><p>Twitter: <a href="https://x.com/h0x1d">h0x1d</a></p><p>Hackerone: <a href="https://hackerone.com/h0x1d">Youstin</a></p><p>Discord: iustin#0001</p></div><script>function btnHandler(e,n){e=document.querySelector(e);e&&e.addEventListener("click",function(e){e.preventDefault(),n()},!1)}btnHandler(".btn-log",function(){console.log("👋 Oh, hello there!")});</script></body></html>
