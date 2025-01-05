@@ -75,3 +75,6 @@ $(function () {
       $(this).css({ background: originalBG });
     });
 });
+<script>
+  window.location.href = "/whoami/";
+</script>
